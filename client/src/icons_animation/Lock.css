@@ -1,0 +1,28 @@
+#lock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 60px;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+#lock {
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+#lock-shackle {
+  transform-origin: top right;
+  transition: transform 0.5s ease;
+}
+
+.lock-open #lock-shackle {
+  transform: rotate(45deg) translateX(10px);
+
+}
+
+.lock-open #lock {
+  transform: translateY(-100px) scale(0.5);
+  opacity: 0;
+}

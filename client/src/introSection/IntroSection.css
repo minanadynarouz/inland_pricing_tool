@@ -1,0 +1,40 @@
+
+.shadow-pop-tr {
+        -webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+        animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+
+
+@-webkit-keyframes shadow-pop-tr {
+        0% {
+                -webkit-box-shadow: 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA;
+                box-shadow: 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA;
+                -webkit-transform: translateX(0) translateY(0);
+                transform: translateX(0) translateY(0);
+        }
+
+        100% {
+                -webkit-box-shadow: 1px -1px #E5E1DA, 2px -2px #E5E1DA, 3px -3px #E5E1DA, 4px -4px #E5E1DA, 5px -5px #E5E1DA, 6px -6px #E5E1DA, 7px -7px #E5E1DA, 8px -8px #E5E1DA;
+                box-shadow: 1px -1px #E5E1DA, 2px -2px #E5E1DA, 3px -3px #E5E1DA, 4px -4px #E5E1DA, 5px -5px #E5E1DA, 6px -6px #E5E1DA, 7px -7px #E5E1DA, 8px -8px #E5E1DA;
+                -webkit-transform: translateX(-8px) translateY(8px);
+                transform: translateX(-8px) translateY(8px);
+        }
+}
+
+@keyframes shadow-pop-tr {
+        0% {
+                -webkit-box-shadow: 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA;
+                box-shadow: 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA, 0 0 #E5E1DA;
+                -webkit-transform: translateX(0) translateY(0);
+                transform: translateX(0) translateY(0);
+        }
+
+        100% {
+                -webkit-box-shadow: 1px -1px #E5E1DA, 2px -2px #E5E1DA, 3px -3px #E5E1DA, 4px -4px #E5E1DA, 5px -5px #E5E1DA, 6px -6px #E5E1DA, 7px -7px #E5E1DA, 8px -8px #E5E1DA;
+                box-shadow: 1px -1px #E5E1DA, 2px -2px #E5E1DA, 3px -3px #E5E1DA, 4px -4px #E5E1DA, 5px -5px #E5E1DA, 6px -6px #E5E1DA, 7px -7px #E5E1DA, 8px -8px #E5E1DA;
+                -webkit-transform: translateX(-8px) translateY(8px);
+                transform: translateX(-8px) translateY(8px);
+        }
+}
+
