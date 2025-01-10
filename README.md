@@ -68,3 +68,54 @@ inland_pricing_tool/
 │ ├── server.js
 
 
+## Installation
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+- MySQL
+
+### Backend Setup
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/inland_pricing_tool.git
+   cd inland_pricing_tool/server
+
+2. Install backend dependencies:
+   npm install
+
+3. Create a .env file in the server directory and add your MySQL credentials:
+  MYSQL_PASS=your_mysql_password
+
+4. Start the backend server:
+  npm start
+
+  Frontend Setup
+1. Navigate to the client directory:
+  cd ../client
+
+2. Install frontend dependencies:
+  npm install
+
+3. Start the frontend development server:
+  npm run dev
+
+## Usage
+1. Open your browser and navigate to http://localhost:5173.
+2. Log in with your credentials.
+3. Use the navigation to access different sections of the tool.
+## API Endpoints
+### Authentication
+POST /login: Authenticate user.
+### File Upload
+POST /uploadFile: Upload an Excel file containing pricing data.
+### Query and Amend Pricing
+POST /queryPrice: Query pricing data.
+POST /insertPrice: Amend pricing data.
+### User Management
+POST /addUser: Add a new user.
+### File Management
+GET /getFiles: Get a list of uploaded files.
+GET /downloadFiles/:fileName: Download a specific file.
