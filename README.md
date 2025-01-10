@@ -20,3 +20,51 @@ This project is an intermodal pricing tool for Egypt, developed using React and 
 - Admin functionalities to add new users and manage data
 - Responsive design with Tailwind CSS
 
+## Project Structure
+inland_pricing_tool/ 
+├── client/ 
+│ ├── .gitignore 
+│ ├── eslint.config.js 
+│ ├── index.html 
+│ ├── package.json 
+│ ├── public/ 
+│ ├── README.md 
+│ ├── src/ 
+│ │ ├── App.jsx 
+│ │ ├── assets/ 
+│ │ ├── data.js 
+│ │ ├── FormSections/ 
+│ │ ├── FormsWrapper/ 
+│ │ ├── icons_animation/ 
+│ │ ├── index.css 
+│ │ ├── introSection/ 
+│ │ ├── Login/ 
+│ │ ├── main.jsx 
+│ │ ├── nav/ 
+│ │ ├── output.css 
+│ │ ├── sectionOne/ 
+│ │ ├── Sections/ 
+│ │ ├── sectionTwo/ 
+│ │ ├── utils.js 
+│ ├── tailwind.config.js 
+│ ├── vite.config.js 
+├── README.md 
+├── server/ 
+│ ├── .env 
+│ ├── .gitignore 
+│ ├── config/ 
+│ │ ├── db.js 
+│ │ ├── getLoggedUser.js 
+│ │ ├── writeToPortsTables.js 
+│ ├── package.json 
+│ ├── routes/ 
+│ │ ├── addUser.js 
+│ │ ├── downloadFiles.js 
+│ │ ├── getFiles.js 
+│ │ ├── insertPrice.js 
+│ │ ├── loginRoutes.js 
+│ │ ├── queryPrice.js 
+│ │ ├── uploadPriceTable.js 
+│ ├── server.js
+
+
