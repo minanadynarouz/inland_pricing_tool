@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(
   session({
-    secret: '12Ks32d1dmimiasdanoli3213-12-@_@_#FinishStrong',
+    secret: '12Ks32d1dmimiasdanoli3213-12-@_@_#Finisrong',
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false, httpOnly: true, sameSite: 'lax', maxAge: 1000 * 60 * 60 * 24 }, // Set to true if using HTTPS
