@@ -4,7 +4,7 @@ import { passwordCheckHashed } from '../utils/utils.js';
 import { body, validationResult } from 'express-validator';
 
 const router = express.Router();
-export let userMail;
+// export let userMail;
 
 router.post("/", [
   body('email').isEmail().withMessage('Invalid email format'),
@@ -30,8 +30,8 @@ router.post("/", [
 
       if (isMatch) {
         //Save mail to session to retreive in another route
-        // req.session.email = email;
-        userMail = email;
+        req.session.email = email;
+        // userMail = email;
 
         console.log("Mail from login route: ", userMail)
         // returning admin value if true or false as this will affect the UI functions
