@@ -8,7 +8,7 @@ export let userMail;
 
 router.post("/", [
   body('email').isEmail().withMessage('Invalid email format'),
-  body('password').isLength({ min: 6 }).notEmpty().withMessage('Password must be at least 6 characters long')
+  body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long')
 ],
   async (req, res) => {
     const errors = validationResult(req);
