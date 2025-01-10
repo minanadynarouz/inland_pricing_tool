@@ -1,6 +1,6 @@
 import express from 'express';
 import { pool } from '../config/db.js'
-import { passwordCheck } from '../utils/utils.js';
+import { passwordCheckHashed } from '../utils/utils.js';
 import { body, validationResult } from 'express-validator';
 
 const router = express.Router();
@@ -26,7 +26,7 @@ router.post("/", [
 
     // Compare password hashes
     try {
-      const isMatch = await passwordCheck(password, data[0].password);
+      const isMatch = await passwordCheckHashed(password, data[0].password);
 
       if (isMatch) {
         //Save mail to session to retreive in another route
