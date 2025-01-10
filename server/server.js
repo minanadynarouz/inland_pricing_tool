@@ -31,10 +31,12 @@ const sessionStore = new MySQLStore({
 
 app.use(
   session({
+    key: 'user_email',
     secret: '12Ks32d1dmimiasdanoli3213-12-@_@_#Finisrong',
+    store: sessionStore,
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false, httpOnly: true, sameSite: 'lax', maxAge: 1000 * 60 * 60 * 24 }, // Set to true if using HTTPS
+    cookie: { secure: false, httpOnly: true, maxAge: 3600000 * 4 }, // Set to true if using HTTPS
   })
 )
 
