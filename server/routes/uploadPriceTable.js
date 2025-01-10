@@ -5,7 +5,7 @@ import xlsx from 'xlsx';
 import { writeToDatabase } from '../config/writeToPortsTables.js';
 import { getLoggedUser } from '../config/getLoggedUser.js';
 import { pool } from '../config/db.js';
-import { userMail } from './loginRoutes.js';
+// import { userMail } from './loginRoutes.js';
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
