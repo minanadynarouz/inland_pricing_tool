@@ -11,7 +11,10 @@ router.post("/", [
   body('password').isLength({ min: 6 }).notEmpty().withMessage('Password must be at least 6 characters long')
 ],
   async (req, res) => {
-
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
     const { email, password } = req.body;
 
     const q = "SELECT * FROM users WHERE email = ?";
