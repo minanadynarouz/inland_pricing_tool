@@ -33,7 +33,7 @@ router.post("/", [
         req.session.email = email;
         // userMail = email;
 
-        console.log("Mail from login route: ", userMail)
+        console.log("Mail from login route: ", req.session.email)
         // returning admin value if true or false as this will affect the UI functions
         return res.status(200).json({ success: true, user: data[0]['admin'] });
       } else {
