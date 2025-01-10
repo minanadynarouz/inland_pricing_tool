@@ -28,7 +28,8 @@ router.post("/", upload.single('excelFile'), async (req, res) => {
   data = []
   const fileName = req.file.filename;
   const filePath = req.file.path;
-  let userEmail = userMail;
+  // let userEmail = userMail;
+  let userEmail = req.session.email;
   //function get username and last name
   const { firstName, lastName } = await getLoggedUser(userEmail);
   console.log('First Name:', firstName);
