@@ -10,6 +10,7 @@ import addUser from './routes/addUser.js';
 import getFiles from './routes/getFiles.js';
 import downloadFiles from './routes/downloadFiles.js';
 import session from 'express-session';
+import MySQLStore from 'connect-mysql';
 
 
 dotenv.config();
@@ -17,6 +18,8 @@ dotenv.config();
 const app = express();
 const PORT = 5000;
 app.use(bodyParser.urlencoded({ extended: true }))
+
+
 app.use(express.json())
 app.use(
   session({
