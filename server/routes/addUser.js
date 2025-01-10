@@ -1,6 +1,6 @@
 import express from 'express';
 import { pool } from '../config/db.js';
-import bcrypt from 'bcrypt';
+import { hashPassword } from '../utils/utils.js';
 
 const router = express.Router();
 
@@ -17,12 +17,14 @@ router.post("/", async (req, res) => {
     return res.status(409).json({ message: "User already exists." });
   }
 
+  const hashedPassword = await hashPassword(password);
+
   try {
     const addUserQuery = `
     INSERT INTO users (first_name, last_name, email, password, admin)
     VALUES (?, ?, ?, ?, ?)
   `;
-    const params = [firstName, lastName, email, password, userAdmin];
+    const params = [firstName, lastName, email, hashedPassword, userAdmin];
 
     const [row] = await pool.query(addUserQuery, params);
 
